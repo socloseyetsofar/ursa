@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URSA.CX — Profile</title>
+  <style>
+    /* ===== Reset & Base ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: "Inter", "Helvetica Neue", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+      overflow-x: hidden;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.3em;
+    }
+
+    header p {
+      color: #888;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    header h1::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #fff;
+      margin: 18px auto 0;
+      opacity: 0;
+      transform: scaleX(0);
+      animation: lineFade 1.5s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    /* ===== Product Grid ===== */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+      width: 100%;
+      max-width: 1000px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 1.1s;
+    }
+
+    .product {
+      background: #0a0a0a;
+      border: 1px solid #111;
+      border-radius: 14px;
+      padding: 24px 22px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .product:hover {
+      border-color: #222;
+      background: #0f0f0f;
+    }
+
+    .product-logo {
+      width: 42px;
+      height: 42px;
+      background: #111;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #fff;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .product:hover .product-logo {
+      background: #fff;
+      color: #000;
+    }
+
+    .product h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .product p {
+      font-size: 0.85rem;
+      color: #888;
+      line-height: 1.4;
+      max-width: 90%;
+    }
+
+    .badge {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      font-size: 0.75rem;
+      color: #888;
+      border: 1px solid #111;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      background: #000;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      margin-top: 70px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #444;
+      letter-spacing: 0.1em;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes lineFade {
+      to {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Profile</h1>
+    <p>Products & access overview</p>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <div class="product-logo">P</div>
+      <h3>Primordial</h3>
+      <p>A well-known Legit/Semi-Rage cheat for CS2</p>
+      <div class="badge">Under update</div>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">C</div>
+      <h3>Compiller</h3>
+      <p>An invite-only Legit/HvH cheat for CS2</p>
+      <div class="badge">Under update</div>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">E</div>
+      <h3>Eversio</h3>
+      <p>An invite-only Legit/HvH cheat for CS2</p>
+      <div class="badge">Under update</div>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">A</div>
+      <h3>Astral</h3>
+      <p>An invite-only Legit/HvH cheat for CS2</p>
+      <div class="badge">Under update</div>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">F</div>
+      <h3>Fatality</h3>
+      <p>An invite-only Legit/HvH cheat for CS2</p>
+      <div class="badge">Under update</div>
+    </div>
+
+    <div class="product">
+      <div class="product-logo">G</div>
+      <h3>Gamesense</h3>
+      <p>A famous invite-only cheat for CS2</p>
+      <div class="badge">Under update</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 URSA.CX — All rights reserved.</p>
+  </footer>
+</body>
+</html>
